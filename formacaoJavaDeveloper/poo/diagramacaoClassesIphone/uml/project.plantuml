@@ -1,0 +1,38 @@
+@startuml
+    
+    package "contract"{
+        interface ReprodutorMusical{
+            +void tocar()
+            +void pausar()
+            +void selecionarMusica()
+        }
+
+        interface AparelhoTelefonico{
+            +void ligar()
+            +void atender()
+            +void iniciarCorreioVoz()       
+        }
+
+        interface NavegadorNaInternet{
+            +void exibirPagina()
+            +void adicionarNovaAba()
+            +void atualizarPagina()
+        }    
+    }
+
+    package "model"{
+        class IPod
+        class NokiaTijolao
+        class InternetExplorer
+        class IPhone
+    }
+
+    IPod --|> ReprodutorMusical
+    NokiaTijolao --|> AparelhoTelefonico
+    InternetExplorer --|> NavegadorNaInternet
+
+    IPhone --|> ReprodutorMusical
+    IPhone --|> AparelhoTelefonico
+    IPhone --|> NavegadorNaInternet
+
+@enduml
