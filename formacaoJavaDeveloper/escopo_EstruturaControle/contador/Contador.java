@@ -1,5 +1,6 @@
 package contador;
 
+import java.util.List;
 import java.util.Scanner;
 
 class ParametrosInvalidosException extends Exception {
@@ -21,6 +22,8 @@ public class Contador {
         } catch (ParametrosInvalidosException e){
             System.out.println(e.getMessage());
         }
+
+        terminal.close();
     }
 
     static void contar(int parametroUm, int parametroDois) throws ParametrosInvalidosException {
